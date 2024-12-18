@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+     "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+      ],
+
+      "allowJs": true,
+      "jsx": "react",
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "noFallthroughCasesInSwitch": true,
+      "skipLibCheck": true,
+      "module": "esnext",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "forceConsistentCasingInFileNames": true,
+      "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    },
+
+    "include": [
+      "src"
+    ]
+  }
+  
