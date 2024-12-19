@@ -1,13 +1,13 @@
-import React from 'react';
-import Botao from '../Botao';
-import './style.scss';
+import React from 'react'; 
+import Style from './Formulario.module.scss' 
+import Botao from '../Botao/index';
 
 class Formulario extends React.Component {
     render() {
         return (
-            <form className="novaTarefa">
-                <div className="inputContainer">
-                    <label htmlFor="tarefa">
+            <form className={Style.novaTarefa}>
+                <div className={Style.inputContainer}>
+                    <label htmlFor={Style.tarefa}>
                         Adicione um novo estudo
                     </label>
                     <input 
@@ -19,10 +19,11 @@ class Formulario extends React.Component {
                      />
                 </div>
 
-                <div className="inputContainer">
+                <div className={Style.inputContainer}>
                     <label htmlFor="tempo">
                         Tempo
                     </label>
+
                     <input 
                         type="time"
                         step="1"
@@ -34,10 +35,16 @@ class Formulario extends React.Component {
                     />
                 </div>
 
-                <Botao />
+                <Botao>
+                    Adicionar
+                </Botao>
             </form>
         )
     }
 }
 
 export default Formulario;
+
+// estilando uma class que possui - hífem
+// coloca entre [""] assim,
+// <div className={Style["novaTarefa__-container"]}></div>

@@ -1,19 +1,26 @@
-import React from 'react';
-import './style.scss';
+import React from 'react'; //Importa a biblioteca React, que é essencial para criar componentes em React.
+import Style from './Botao.module.scss'; //Importa o arquivo CSS (usando CSS Modules) para aplicar estilos ao componente.
 
-class Botao extends React.Component {
+// Declara uma classe chamada Botao que estende React.Component. Isso significa que ela é um componente de classe do React.
+//React.Component<React.PropsWithChildren<{}>>:
+    // Especifica que o componente pode aceitar props (propriedades) e que essas props incluem a propriedade especial children.
+class Botao extends React.Component<React.PropsWithChildren<{}>> {
     render() {
         return (
-            <button className="botao">
-                Botão
+            <button className={Style.botao}>
+                {this.props.children} {/* Representa as propriedades que foram passadas para o componente Botao. */}
+
             </button>
-        )
+        );
     }
 }
 
-export default Botao;
+export default Botao; //Exporta o componente Botao para que ele possa ser usado em outros arquivos.
 
 
+// ----------------------------------------------------------------------------------------------------------------------------
+// funcao render() é obrigatória dentro do class component
+// ----------------------------------------------------------------------------------------------------------------------------
             // class Botao extends React.Component {
             //     render() {
             //         //outra forma de aplicar o style é atraves de uma variavel.
@@ -40,9 +47,6 @@ export default Botao;
             //     }
             // }            
 
-
-
-
                 // {/* // style={styles} */}
             
 
@@ -54,3 +58,4 @@ export default Botao;
             // // }} aqui seria o fechamento da tag*/}
             //     Botão
             // </button>
+// ----------------------------------------------------------------------------------------------------------------------------            
